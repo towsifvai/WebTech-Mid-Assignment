@@ -1,0 +1,101 @@
+h1{
+
+    text-align: center;
+    color: red;
+}
+
+.RegisterButton, .EmployeesButton{
+    background-color: #28a745; 
+    color: white;
+    padding: 15px 30px; 
+    font-size: 20px; 
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+
+}
+
+div{
+
+    text-align: center;
+}
+p{
+text-align: center;
+    font-size: xx-large;
+}
+
+body{
+
+    background-color: azure;
+}
+
+
+
+
+-------------------------------------------------------------------------------------
+
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    display: none;
+}
+
+.submitButton, .indexButton {
+    background-color: #28a745; 
+    color: white;
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.submitButton:hover, .backButton:hover {
+  
+    background-color: #218838; 
+}
+
+
+form button {
+    display: inline-block;
+}

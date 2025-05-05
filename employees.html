@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Employee List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .edit-form {
+      display: none;
+      margin-top: 20px;
+    }
+    .edit-form input, .edit-form select {
+      margin: 5px;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sample Employee List</h1>
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Joining Date</th>
+        <th>Gender</th>
+        <th>Employment Type</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button id="buttonEdit" onclick="editRow(this)">Edit</button><button id="buttonDelete" onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="edit-form" id="editForm">
+    <h3>Edit Employee</h3>
+    <input type="text" id="editId" placeholder="ID" readonly>
+    <input type="text" id="editName" placeholder="Name">
+    <input type="email" id="editEmail" placeholder="Email">
+    <select id="editDepartment">
+      <option value="HR">HR</option>
+      <option value="Sales">Sales</option>
+      <option value="IT">IT</option>
+      <option value="Marketing">Marketing</option>
+    </select>
+    <input type="date" id="editDate">
+    <select id="editGender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    <select id="editType">
+      <option value="Full-Time">Full-Time</option>
+    </select>
+    <button onclick="saveEdit()">Save</button>
+    <button onclick="cancelEdit()">Cancel</button>
+  </div>
+
+  <script>
+    let currentRow = null;
+
+    function deleteRow(button) {
+      const row = button.closest("tr");
+      row.remove();
+    }
+
+    function editRow(button) {
+      currentRow = button.closest("tr");
+      document.getElementById("editId").value = currentRow.cells[0].textContent;
+      document.getElementById("editName").value = currentRow.cells[1].textContent;
+      document.getElementById("editEmail").value = currentRow.cells[2].textContent;
+      document.getElementById("editDepartment").value = currentRow.cells[3].textContent;
+      document.getElementById("editDate").value = currentRow.cells[4].textContent;
+      document.getElementById("editGender").value = currentRow.cells[5].textContent;
+      document.getElementById("editType").value = currentRow.cells[6].textContent;
+      document.getElementById("editForm").style.display = "block";
+    }
+
+    function saveEdit() {
+      if (currentRow) {
+        currentRow.cells[1].textContent = document.getElementById("editName").value;
+        currentRow.cells[2].textContent = document.getElementById("editEmail").value;
+        currentRow.cells[3].textContent = document.getElementById("editDepartment").value;
+        currentRow.cells[4].textContent = document.getElementById("editDate").value;
+        currentRow.cells[5].textContent = document.getElementById("editGender").value;
+        currentRow.cells[6].textContent = document.getElementById("editType").value;
+        document.getElementById("editForm").style.display = "none";
+        currentRow = null;
+      }
+    }
+
+    function cancelEdit() {
+      document.getElementById("editForm").style.display = "none";
+      currentRow = null;
+    }
+  </script><button class="indexButton" onclick="window.location.href='index.html'">Index</button>
+
+</body>
+</html>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

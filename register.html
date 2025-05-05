@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Employee Registration</h1>
+    <p>Fill out the form to register a new employee.</p>
+
+ 
+    <form id="employeeForm" onsubmit="return validateForm(event)">
+<div class="group">
+    <label for="employeeId"> Employee ID</label>
+    <label> <input type="text" id="employeeId" name="EmployeeID" placeholder="Employee ID"></label>
+<span class="error" id="IdError">Enter a Valid ID </span>
+
+</div>
+
+
+<div class="group">
+    <label for="EmployeeName"> Full Name</label>
+    <label> <input type="text" id="employeeName" name="EmployeeName" placeholder="Towsif Billah"></label>
+<!-- <span class="error" id="NameError"> </span> -->
+<span class="error" id="NameError">Enter a valid name (letters only)</span>
+
+</div>
+
+<div class="group">
+    <label for="EmployeeEmail"> Employee Email</label>
+    <label> <input type="email" id="employeeEmail" name="EmployeeEmail" placeholder="towsif.billah@gmail.com"></label>
+<span class="error" id="EmailError">Enter Email Properly  </span>
+
+</div>
+
+<div class="group">
+    <label for="Department">Department</label>
+    <select name="Department" id="department">
+        <option value="">Select</option>
+        <option value="HR">HR</option>
+        <option value="Sales">Sales</option>
+        <option value="IT">IT</option>
+        <option value="Marketing">Marketing</option>
+    </select>
+    <br>
+<span class="error" id="DepartmentError">Select Atleast One </span>
+
+</div>
+
+
+
+<div class="group">
+    <label for="JoiningDate"> Joining Date</label>
+<input type="date" id="employeeJoin">
+<br>
+    <span class="error" id="DateError"> Enter Joining Date </span>
+
+</div>
+
+
+
+<div class="group">
+    <label style="padding-right: 105px;">Gender:</label>
+    
+    <label>
+      Male
+      <input type="radio" name="gender" value="Male">
+    </label>
+  
+    <label>
+      Female
+      <input type="radio" name="gender" value="Female">
+    </label>
+  
+    <span class="error" id="RadioError"> Select at least one </span>
+  </div>
+  
+  
+
+
+<div class="group">
+    <label for="EmployeeType" id="employeeType"> Employee Type: </label>
+<label for="employeeType">Full-Time 
+       <input type="checkbox"  name="employeeType" value="Full-Time">
+</label>
+<label for="employeeType">Part-Time 
+    <input type="checkbox"  name="employeeType" value="Part-Time">
+</label>
+
+    <span class="error" id="CheckboxError"> Select atleast one type </span>
+
+</div>
+<div><button type="submit" class="submitButton">Submit</button>
+<button type="button" class="indexButton" onclick="window.location.href='index.html'">Index</button>
+
+</div>
+
+
+
+
+   </form>
+
+    <script src="validate.js"></script>
+</body>
+</html>
