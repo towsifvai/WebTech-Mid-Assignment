@@ -34,12 +34,17 @@ if (gender === "Male") {
         currentRow.cells[2].textContent = document.getElementById("editEmail").value;
         currentRow.cells[3].textContent = document.getElementById("editDepartment").value;
         currentRow.cells[4].textContent = document.getElementById("editDate").value;
-        currentRow.cells[5].textContent = document.getElementById("editGender").value;
+    
+        const selectedGender = document.querySelector('input[name="editGender"]:checked');
+        currentRow.cells[5].textContent = selectedGender ? selectedGender.value : "";
+    
         currentRow.cells[6].textContent = document.getElementById("editType").value;
+    
         document.getElementById("editForm").style.display = "none";
         currentRow = null;
       }
     }
+    
 
     function cancelEdit() {
       document.getElementById("editForm").style.display = "none";
