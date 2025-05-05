@@ -1,0 +1,88 @@
+/* Basic layout for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: rgba(40, 46, 116, 0.79);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+th {
+  padding: 12px 15px;
+  text-align: left;
+  background-color: skyblue;
+}
+
+
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.gender-group {
+  display: flex;
+  gap: 10px; /* spacing between options */
+  align-items: center;
+}
+.gender-group label {
+  margin: 0;
+}
+
+
+
+.edit-form {
+  display: none;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  width: 400px;
+}
+
+
+.edit-form input,
+.edit-form select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Edit form buttons */
+.edit-form button {
+  background-color: #28a745;
+  margin-right: 10px;
+}
+
+
+.indexButton{
+
+text-align: center;
+border-radius: 5px;
+
+}
